@@ -1,0 +1,11 @@
+[Unit]
+Description=A simple clash wrapper to manage multiple clash config files.
+After=network.target
+
+[Service]
+Type=exec
+Restart=on-abort
+ExecStart=/usr/bin/clash-multi-conf
+
+[Install]
+WantedBy=default.target
